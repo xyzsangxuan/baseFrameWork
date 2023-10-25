@@ -8,8 +8,8 @@ import { GameManager } from './GameManager';
 
 import { ResMgr } from './ResMgr';
 import { UtilManager } from '../Utils/UtilManager';
-import { setting } from '../../Game/Setting/setting';
-import { PlayerInfo } from '../../Game/EO/PlayerInfo';
+import { setting } from './EO/setting';
+import { PlayerInfo } from './EO/PlayerInfo';
 
 export class PlayerSaveManager extends Component {
     

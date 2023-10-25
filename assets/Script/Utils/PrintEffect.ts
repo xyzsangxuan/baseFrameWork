@@ -1,6 +1,6 @@
 import { _decorator, Component, Label, Node, RichText } from 'cc';
 const { ccclass, property } = _decorator;
-
+//打字机效果
 export class PrintEffect  {
     private static instance: PrintEffect;
     private static lock: boolean = false;

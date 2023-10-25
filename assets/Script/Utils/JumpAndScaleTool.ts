@@ -1,7 +1,5 @@
 import { _decorator, Component, easing, macro, math, misc, Node, Quat, tween, Tween, Vec2, Vec3 } from 'cc';
-import { UtilManager } from './UtilManager';
-import { UIManager } from '../Manager/UIManager';
-import { GameManager } from '../Manager/GameManager';
+
 
 export class JumpAndScaleTool extends Component {
 

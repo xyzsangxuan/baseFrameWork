@@ -20,18 +20,18 @@ export class NetUtil  {
 			//微信小游戏环境下才执行
 			//第1次运行需要初始化
 			if (!this.isWxInit) {
-				wx.cloud.init({env:'prod-0giiqofw6cf20a00'});
+				wx.cloud.init({env:'prod-5g5zdd7m2fe71a6d'});
 				this.isWxInit = true;
 			}
 			//云托管
 		    const res = wx.cloud.callContainer({
                 config: {
-                    env: 'prod-0giiqofw6cf20a00', // 微信云托管的环境ID
+                    env: 'prod-5g5zdd7m2fe71a6d', // 微信云托管的环境ID
                 },
                 path: '/' + path, // 填入业务自定义路径和参数，根目录，就是 / 
                 method: 'GET', // 按照自己的业务开发，选择对应的方法
                 header: {
-                    "X-WX-SERVICE": "springboot-x8q7", // 填入服务名称
+                    "X-WX-SERVICE": "springboot-fytv", // 填入服务名称
                     "content-type": "application/json"
                     // 其他 header 参数
                 },
@@ -50,6 +50,7 @@ export class NetUtil  {
                         //console.log("失败:",res);
                         // UIManager.getInstance().LoadingPanel(false);
                         // UIManager.getInstance().Tip("同步失败！");
+                        //UIManager.getInstance().Tip("服务器正在升级！ 请稍候2~3分钟")
                     }
                 }
             });
@@ -94,18 +95,18 @@ export class NetUtil  {
 			//微信小游戏环境下才执行
 			//第1次运行需要初始化
 			if (!this.isWxInit) {
-				wx.cloud.init({env:'prod-0giiqofw6cf20a00'});
+				wx.cloud.init({env:'prod-5g5zdd7m2fe71a6d'});
 				this.isWxInit = true;
 			}
 			//云托管
 		    const res = wx.cloud.callContainer({
                 config: {
-                    env: 'prod-0giiqofw6cf20a00', // 微信云托管的环境ID
+                    env: 'prod-5g5zdd7m2fe71a6d', // 微信云托管的环境ID
                 },
                 path: '/' + path, // 填入业务自定义路径和参数，根目录，就是 / 
                 method: 'POST', // 按照自己的业务开发，选择对应的方法
                 header: {
-                    "X-WX-SERVICE": "springboot-x8q7", // 填入服务名称
+                    "X-WX-SERVICE": "springboot-fytv", // 填入服务名称
                     "content-type": "application/json"
                     // 其他 header 参数
                 },
@@ -114,17 +115,17 @@ export class NetUtil  {
                     if (successCallback != null) {
                         successCallback(res.data);
                         //console.log("成功：",res);
-                        UIManager.getInstance().LoadingPanel(false);
+                        //UIManager.getInstance().LoadingPanel(false);
                     }
                 },
                 fail: (err: any) => {
                     if (errorCallBack != null) {
                         errorCallBack(err.data);
                         //console.log("失败",res);
-                        let code:number = res.code;
+                        //let code:number = res.code;
                         // UIManager.getInstance().LoadingPanel(false);
                         // UIManager.getInstance().Tip("同步失败！");
-                        
+                        //UIManager.getInstance().Tip("服务器正在升级！ 请稍候2~3分钟")
                     }
                 }
             });
