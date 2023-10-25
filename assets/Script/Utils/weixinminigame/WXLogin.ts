@@ -1,6 +1,5 @@
 import { _decorator, Component, Node, url, Sprite, assetManager, ImageAsset, SpriteFrame, Texture2D, Label, EditBox, NodeEventType, sys } from 'cc';
 const { ccclass, property } = _decorator;
-import 'miniprogram-api-typings';
 @ccclass('WXLogin')
 export class WXLogin extends Component {
 

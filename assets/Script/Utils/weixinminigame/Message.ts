@@ -1,5 +1,4 @@
 import { sys } from "cc";
-import { PlayerSaveManager } from "../../Manager/PlayerSaveManager";
 
 /**
  * 弹出小游戏订阅授权框
@@ -28,7 +27,7 @@ export function requestSubscribeMessage() {
         console.log("成功发送消息 ");
           if(res['XqYC3s67Zpv2VReUUm9JGof5zCiNXd9SPkndDDyojXc'] === 'accept'){
             console.log("成功发送消息 后去到成功反馈");
-            PlayerSaveManager.getInstance().playerEO.subscribeOne = 1 ;
+            //PlayerSaveManager.getInstance().playerEO.subscribeOne = 1 ;
 
             //PlayerSaveManager.getInstance().uploadPlayerProperty(4,1);
             //后续会提交，但是如果订阅消息位置改变，需要手动提交
